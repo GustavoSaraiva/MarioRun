@@ -7,7 +7,8 @@ align-items: center;
 
 .gameboard{
     border: 5px solid black;
-    background: aquamarine;
+    border-bottom: 5px solid green;
+    background: linear-gradient(#87ceeb, #e0f6ff);
     height: 500px;
     width: 600px;    
     position: relative;
@@ -18,13 +19,24 @@ align-items: center;
     position: absolute;
     width: 80px;
     bottom: 0px;
-    animation: jump 900ms infinite;
 } 
+
+.cloud {
+    position: absolute;
+    top: 100px;
+    width: 250px;
+    animation: clouds 20s infinite linear;
+}
+
+.jump-class {
+    animation: jump 700ms ease-out;
+}
 
 .pipe{
     position: absolute;
     width: 45px;
     bottom: 0px;
+    /*left:70px;*/
     right: -45px;
     animation: pipe-move 2s infinite linear;
 }
@@ -46,12 +58,12 @@ align-items: center;
     
     }
     
-    40% {
+    45% {
         
         bottom: 120px;
     }
     
-    60% {
+    55% {
         
         bottom: 120px;
     }
@@ -60,5 +72,16 @@ align-items: center;
         bottom: 0px;
     }
     
+    
+}
+
+@keyframes clouds {
+
+    from{
+        right: -250px;
+    }
+    to{
+        right: 100%;
+    }
     
 }
